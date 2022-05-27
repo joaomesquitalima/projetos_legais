@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>calculadora</title>
+    <script src="imc.js"></script>
+    <link rel="stylesheet" href="style.css">
+    
+</head>
+<body>
+    <div class="main" >
+        <button class="wt" onclick="about()">O que é imc</button>
+        <div id="obs">
+            <div id="p1"></div>
+            <div id="p2">
+            <p>O IMC (Índice de Massa Corporal) é um calculo universal adotado pela OMS para classificar padroes de saude.</p>
+            </div>
+
+        </div>
+        
+        <div class="imc"id="quad">
+            <div id="pegar">
+            
+                <h2 id="title">Calcule aqui seu IMC</h2>
+                    <label>Digite seu peso</label>
+                    <br>
+                    <input id="peso" type="text" placeholder="Seu peso aqui..." value="">
+                    <br>
+                    <label>Digite aqui sua altura</label>
+                    <br>
+                    <input id="altura" type="text" placeholder="Sua altura aqui..." value="">
+                    <br>
+                    <button class="btn" onclick="calc()">Calcular</button>
+            </div>
+
+            <div id="resultado">
+                <div id="resul">
+                    <h2 id="title">Seu resultado</h2>
+                    <br>
+    
+                    <span>IMC é:</span> 
+                    <span id="oimc"></span>
+                    <p id="diagnostico"></p>  
+
+                </div>
+            
+                    
+            </div>  
+        </div>
+    </div>
+    <footer>
+        <a href="#">by Joao Vitor Mesquita de Lima</a>
+    </footer>
+</body>
+</html>

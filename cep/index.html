@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: sans-serif;
+        }
+        body{
+            display: flex;
+            justify-content: center;
+            height: 100vh;
+            align-items: center;
+            background-color: #ddd;
+        }
+
+        main{
+            
+            height: 300px;
+            width: 350px;
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            text-align: center;
+            row-gap: 40px;
+
+            
+
+        }
+
+        main h1{
+            font-size: 48px;
+
+        }
+
+        main input{
+            padding: 9px;
+            font-size: 24px;
+            text-align: center;
+            outline: none;
+        }
+
+        main button{
+            background-color: #035f03;
+            padding: 5px;
+            font-size: 24px;
+            color: #fff;
+            border: 1px solid #aaf;
+            border-radius: 9px;
+            cursor: pointer;
+            transition: all .5s;
+            font-weight: bold;
+            
+        }
+
+
+        main button:hover{
+            color: #d4d4d4;
+            background-color: rgb(63, 129, 61);
+        }
+
+        p{
+            font-size: 20px;
+            text-align: left;
+            background-color: rgb(177, 177, 177);
+            padding: 10px;
+            border-radius: 10px;
+        }
+
+
+    </style>
+</head>
+<body>
+    <main>
+        <h1>Busca CEP</h1>
+
+    <input id="cep" type="text" placeholder="Digite seu CEP">
+    <button onclick="buscarCEP()">Buscar</button>
+    <p id="rua"></p>
+    <p id="bairro"></p>
+    <p id="cidade"></p>
+    
+
+    </main>
+    
+
+    <script src="script.js"></script>
+</body>
+</html>

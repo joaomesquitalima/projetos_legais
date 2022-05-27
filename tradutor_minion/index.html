@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fale minion
+    </title>
+
+    <style>
+        body{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        div{
+            text-align: center;
+
+        }
+
+        input{
+            padding: 9px;
+            font-size: 16px;
+        }
+
+        button{
+            padding: 9px;
+        }
+    </style>
+</head>
+<body>
+
+    <div>
+        <input type="text" id="peg" placeholder="digite alguma frase" >
+
+        <button onclick="tradu()">Traduzir</button>
+    
+        <p id="texto"></p>
+
+    </div>
+
+
+
+    <script>
+
+        function tradu(){
+            const input = document.getElementById('peg').value;
+
+const ajax = new XMLHttpRequest();
+
+ajax.open('GET','https://api.funtranslations.com/translate/minion.json?text= '+ input);
+
+ajax.send();
+
+ajax.onload = function(){
+    let obj = JSON.parse(this.responseText);
+    
+    document.getElementById('texto').innerHTML = obj.contents.translated;
+}
+            
+        }
+
+      
+    
+    </script>
+    
+</body>
+</html>
